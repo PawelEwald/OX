@@ -1,3 +1,5 @@
+http://designconcept.webdev20.pl/articles/podstawy-gita-i-githuba/
+
 pwd
 clear
 cd ..
