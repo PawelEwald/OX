@@ -14,7 +14,7 @@ public class OX extends JFrame {
     
     Panel1 p1 = new Panel1();
     Panel2 p2 = new Panel2();
-    
+    Panel3 p3 = new Panel3();
 
     public OX() {
         okno1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -24,12 +24,21 @@ public class OX extends JFrame {
 
         okno1.add(p1);
         okno1.add(p2);
+        okno1.add(p3);
 
         okno1.setVisible(true);
         okno1.setLocationRelativeTo(null);
         
         p1.setPanel2(p2);
+        p1.setPanel3(p3);
+        
         p2.setPanel1(p1);
+        p2.setPanel3(p3);
+        
+        p3.setPanel1(p1);
+        p3.setPanel2(p2);
+        
+        
     }
 
     private static final long serialVersionUID = 1L;

@@ -17,6 +17,7 @@ public class Sprawdzanie {
                 || ((a[2] < 9) && (a[2] == a[5]) && (a[5] == a[8]))
                 || ((a[0] < 9) && (a[0] == a[4]) && (a[4] == a[8]))
                 || ((a[2] < 9) && (a[2] == a[4]) && (a[4] == a[6]))) {
+            kolejka.setIleJeszczeRuchowZostalo(0);
             System.out.print("\nKoniec gry");
 
             for (int i = 0; i < 9; i++) {
