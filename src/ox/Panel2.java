@@ -20,6 +20,9 @@ public class Panel2 extends JPanel implements ActionListener {
 
     public Panel1 panel1;
     public Panel3 panel3;
+    public Panel4 panel4;
+    public Funkcje funkcje;
+    
     JLabel l = new JLabel("hello\n");
     JTextField t = new JTextField("a");
     JButton b = new JButton("Change");

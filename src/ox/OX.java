@@ -15,6 +15,9 @@ public class OX extends JFrame {
     Panel1 p1 = new Panel1();
     Panel2 p2 = new Panel2();
     Panel3 p3 = new Panel3();
+    Panel4 p4 = new Panel4();
+    Funkcje funkcje = new Funkcje();
+
 
     public OX() {
         okno1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,18 +28,37 @@ public class OX extends JFrame {
         okno1.add(p1);
         okno1.add(p2);
         okno1.add(p3);
+        
+        
+        
 
         okno1.setVisible(true);
         okno1.setLocationRelativeTo(null);
         
         p1.setPanel2(p2);
         p1.setPanel3(p3);
-        
+        p1.setPanel4(p4);
+        p1.setFunkcje(funkcje);
+                
         p2.setPanel1(p1);
         p2.setPanel3(p3);
+        p2.setPanel4(p4);
+        p2.setFunkcje(funkcje);
         
         p3.setPanel1(p1);
         p3.setPanel2(p2);
+        p3.setPanel4(p4);
+        p3.setFunkcje(funkcje);
+        
+        p4.setPanel1(p1);
+        p4.setPanel2(p2);
+        p4.setPanel3(p3);
+        p4.setFunkcje(funkcje);
+        
+        funkcje.setPanel1(p1);
+        funkcje.setPanel2(p2);
+        funkcje.setPanel3(p3);
+        funkcje.setPanel4(p4);
         
         
     }

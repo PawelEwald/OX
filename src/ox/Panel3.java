@@ -20,14 +20,16 @@ public class Panel3 extends JPanel implements ActionListener {
 
     public Panel1 panel1;
     public Panel2 panel2;
-
+    public Panel4 panel4;
+    public Funkcje funkcje;
+    
+    Sprawdzanie sprawdzanie;
     Kolejka kolejka = new Kolejka();
-    Funkcje funkcje = new Funkcje();
+    //Funkcje funkcje = new Funkcje();
     JButton exit = new JButton("EXIT");
     JButton odNowa = new JButton("Zagraj jeszcze raz");
 
     public Panel3() {
-
         setPreferredSize(new Dimension(200, 200));
         setBackground(Color.blue);
         setVisible(true);
@@ -38,15 +40,7 @@ public class Panel3 extends JPanel implements ActionListener {
         add(odNowa);
     }
 
-    public void odNowa() {
-        for (int j = 0; j < 9; j++) {
-            panel1.pomocnicza[j] = 9;
 
-//            panel1.b[j].setIcon(new ImageIcon("scr/N.png"));
-//            panel1.b[j].setDisabledIcon(new ImageIcon("scr/N.png"));
-        }
-        kolejka.setIleJeszczeRuchowZostalo(9);
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -56,14 +50,11 @@ public class Panel3 extends JPanel implements ActionListener {
         if (źródło == exit) {
             System.exit(0);
         }
-            else if (źródło == odNowa){
-            for (int j = 0; j < 9; j++) {
-            panel1.pomocnicza[j] = 9;
-            panel1.b[j].setIcon(new ImageIcon("scr/N.png"));
-            panel1.b[j].setDisabledIcon(new ImageIcon("scr/N.png"));
-            panel1.b[j].setEnabled(true);
-            }
-                
+        if (źródło == odNowa) {
+            funkcje.odNowa(panel1.pomocnicza,panel1.b);
         }
+           
+                
+        
     }
 }
