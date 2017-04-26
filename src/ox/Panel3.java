@@ -22,10 +22,7 @@ public class Panel3 extends JPanel implements ActionListener {
     public Panel2 panel2;
     public Panel4 panel4;
     public Funkcje funkcje;
-    
-    
-    
-    //Funkcje funkcje = new Funkcje();
+
     JButton exit = new JButton("EXIT");
     JButton odNowa = new JButton("Zagraj jeszcze raz");
 
@@ -40,8 +37,6 @@ public class Panel3 extends JPanel implements ActionListener {
         add(odNowa);
     }
 
-
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -51,10 +46,7 @@ public class Panel3 extends JPanel implements ActionListener {
             System.exit(0);
         }
         if (źródło == odNowa) {
-            funkcje.odNowa(panel1.pomocnicza,panel1.b);
+            funkcje.odNowa(panel1.pomocnicza, panel1.b);
         }
-           
-                
-        
     }
 }

@@ -47,15 +47,13 @@ public class Panel1 extends JPanel implements ActionListener {
         setVisible(true);
         System.out.println("Działa Panel1");
     
-        wystawienieTablicyDoGry();
+        wystawienieCzystejTablicyDoGry(pomocnicza,b);
         
         
         add(l2);
     }
 
-    
-    
-    public void wystawienieTablicyDoGry() {
+    public void wystawienieCzystejTablicyDoGry(int pomocnicza[],JButton b[]) {
 
         for (int j = 0; j < 9; j++) {
             pomocnicza[j] = 9;
@@ -67,6 +65,8 @@ public class Panel1 extends JPanel implements ActionListener {
             this.add(b[j]);
         }
     }
+    
+
 
     
 
@@ -79,8 +79,6 @@ public class Panel1 extends JPanel implements ActionListener {
         if (źródło == b[2]) {
             l2.setText("zmiana");
         }
-        
-        
         
         
         

@@ -5,6 +5,7 @@
  */
 package ox;
 
+import java.awt.Dimension;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import lombok.Getter;
@@ -23,11 +24,11 @@ public class Funkcje {
     public Panel3 panel3;
     public Panel4 panel4;
 
-    
-
     private static int ktoTeraz = 0;
     private static int ileJeszczeRuchowZostalo = 9;
-
+    
+    
+    
     public int getKtoTeraz() {
         return ktoTeraz;
     }
@@ -61,7 +62,7 @@ public class Funkcje {
 
     public void sprawdzenieCzyKoniec(int a[], JButton b[]) {
 
-        if (((a[0] < 9) && (a[0] == a[1]) && (a[1] == a[2]))
+        if (       ((a[0] < 9) && (a[0] == a[1]) && (a[1] == a[2]))
                 || ((a[3] < 9) && (a[3] == a[4]) && (a[4] == a[5]))
                 || ((a[6] < 9) && (a[6] == a[7]) && (a[7] == a[8]))
                 || ((a[0] < 9) && (a[0] == a[3]) && (a[3] == a[6]))
@@ -77,9 +78,30 @@ public class Funkcje {
             }
         } else if (getIleJeszczeRuchowZostalo() == 0) {
             System.out.print("\nNikt nie wygral");
-
         }
-
     }
+    
+    
+        public void wystawienieCzystejTablicyDoGry(int pomocnicza[],JButton b[]) {
+
+        for (int j = 0; j < 9; j++) {
+            pomocnicza[j] = 9;
+            b[j] = new JButton();
+            b[j].setName("" + j);
+            b[j].setPreferredSize(new Dimension(50, 50));
+            b[j].setIcon(new ImageIcon("scr/N.png"));
+            //panel1.b[j].addActionListener(this);
+            
+                this.panel1.add(b[j]);
+            
+            
+        }
+    }
+
+
+    
+    
+    
+        
 
 }
