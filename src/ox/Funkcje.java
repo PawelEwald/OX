@@ -23,7 +23,7 @@ public class Funkcje {
     public Panel3 panel3;
     public Panel4 panel4;
 
-    Kolejka kolejka = new Kolejka();
+    
 
     private static int ktoTeraz = 0;
     private static int ileJeszczeRuchowZostalo = 9;

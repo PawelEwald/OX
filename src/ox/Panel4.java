@@ -21,9 +21,7 @@ public class Panel4 extends JPanel implements ActionListener {
     public Panel3 panel3;
     public Funkcje funkcje;
 
-    Kolejka kolejka = new Kolejka();
-
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

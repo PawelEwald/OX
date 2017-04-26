@@ -35,9 +35,9 @@ public class Panel1 extends JPanel implements ActionListener {
     List<Integer> values = Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8);
     public JButton[] b = new JButton[9];
     public int[] pomocnicza = new int[9];
-    Kolejka kolejka = new Kolejka();
+    
     //Funkcje funkcje = new Funkcje();
-    Sprawdzanie sprawdzanie = new Sprawdzanie();
+    
 
     public Panel1() {
 

@@ -23,8 +23,8 @@ public class Panel3 extends JPanel implements ActionListener {
     public Panel4 panel4;
     public Funkcje funkcje;
     
-    Sprawdzanie sprawdzanie;
-    Kolejka kolejka = new Kolejka();
+    
+    
     //Funkcje funkcje = new Funkcje();
     JButton exit = new JButton("EXIT");
     JButton odNowa = new JButton("Zagraj jeszcze raz");
