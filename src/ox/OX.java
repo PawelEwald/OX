@@ -60,7 +60,7 @@ public class OX extends JFrame {
         funkcje.setPanel3(p3);
         funkcje.setPanel4(p4);
         
-        
+               
     }
 
     private static final long serialVersionUID = 1L;
@@ -69,6 +69,7 @@ public class OX extends JFrame {
 
         new OX();
         System.out.println("ok");
+
 
     }
 }

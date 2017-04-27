@@ -6,6 +6,8 @@
 package ox;
 
 import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.util.Random;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import lombok.Getter;
@@ -24,9 +26,13 @@ public class Funkcje {
     public Panel3 panel3;
     public Panel4 panel4;
 
+    public int[] pomocnicza;
+    public int m;
     private static int ktoTeraz = 0;
-    private static int ileJeszczeRuchowZostalo = 9;
+    private static int czyKoniec = 1;
     
+    private static int ileJeszczeRuchowZostalo = 9;
+
     
     
     public int getKtoTeraz() {
@@ -37,11 +43,11 @@ public class Funkcje {
         return ileJeszczeRuchowZostalo;
     }
 
-    public void setKtoTeraz() {
+    public void setZmianaGracza() {
         Funkcje.ktoTeraz = (-1 * (getKtoTeraz() - 1));
     }
 
-    public void setIleJeszczeRuchowZostalo() {
+    public void setZmniejszenieRuchowOJeden() {
         Funkcje.ileJeszczeRuchowZostalo = ((getIleJeszczeRuchowZostalo() - 1));
     }
 
@@ -58,11 +64,22 @@ public class Funkcje {
         }
         setIleJeszczeRuchowZostalo(9);
         panel2.setVisible(true);
+        
+        if (getKtoTeraz() == 1 & getIleJeszczeRuchowZostalo() > 0) {
+            panel1.PodajePoleWKtoreOdbedzieSieRuchKomputera(getIleJeszczeRuchowZostalo(), b);
+            panel1.wcisnieciePrzycisku(m, pomocnicza);
+            setZmianaGracza();
+            setZmniejszenieRuchowOJeden();
+            //wypisanieRóżnychParametrów(e);
+            sprawdzenieCzyKoniec(pomocnicza, b);
+        }
+        
+        
     }
 
     public void sprawdzenieCzyKoniec(int a[], JButton b[]) {
 
-        if (       ((a[0] < 9) && (a[0] == a[1]) && (a[1] == a[2]))
+        if (((a[0] < 9) && (a[0] == a[1]) && (a[1] == a[2]))
                 || ((a[3] < 9) && (a[3] == a[4]) && (a[4] == a[5]))
                 || ((a[6] < 9) && (a[6] == a[7]) && (a[7] == a[8]))
                 || ((a[0] < 9) && (a[0] == a[3]) && (a[3] == a[6]))
@@ -80,28 +97,21 @@ public class Funkcje {
             System.out.print("\nNikt nie wygral");
         }
     }
-    
-    
-        public void wystawienieCzystejTablicyDoGry(int pomocnicza[],JButton b[]) {
 
-        for (int j = 0; j < 9; j++) {
-            pomocnicza[j] = 9;
-            b[j] = new JButton();
-            b[j].setName("" + j);
-            b[j].setPreferredSize(new Dimension(50, 50));
-            b[j].setIcon(new ImageIcon("scr/N.png"));
-            //panel1.b[j].addActionListener(this);
-            
-                this.panel1.add(b[j]);
-            
-            
+    public void dezaktywacjaIAktywacjaPaneliPoRozpoczeciuGry() {
+        if (getIleJeszczeRuchowZostalo() < 9 & getIleJeszczeRuchowZostalo() > 0) {
+            panel2.setVisible(false);
+        } else {
+            panel2.setVisible(true);
         }
     }
-
-
+//
+//    public void wypisanieRóżnychParametrów(ActionEvent e){
+//    System.out.print(((JButton) e.getSource()).getName() + " ");
+//    panel1.values.forEach(k -> System.out.print(pomocnicza[k] + "-"));
+//    System.out.print(" " + getIleJeszczeRuchowZostalo());
+//        System.out.println("");
+//    
+    }
     
-    
-    
-        
 
-}

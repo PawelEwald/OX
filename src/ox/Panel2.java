@@ -27,7 +27,7 @@ public class Panel2 extends JPanel implements ActionListener {
     JTextField t = new JTextField("a");
     JButton b = new JButton("Change");
     int j = 0;
-    JButton odNowa = new JButton("Zagraj jeszcze raz");
+    
 
     public Panel2() {
 
@@ -57,8 +57,7 @@ public class Panel2 extends JPanel implements ActionListener {
         add(trudne);
 
         
-        odNowa.addActionListener(this);
-        add(odNowa);
+        
     }
 
     @Override
