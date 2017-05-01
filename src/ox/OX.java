@@ -17,6 +17,7 @@ public class OX extends JFrame {
     Panel3 p3 = new Panel3();
     Panel4 p4 = new Panel4();
     Funkcje funkcje = new Funkcje();
+    Taktyka taktyka = new Taktyka();
 
 
     public OX() {
@@ -39,11 +40,14 @@ public class OX extends JFrame {
         p1.setPanel3(p3);
         p1.setPanel4(p4);
         p1.setFunkcje(funkcje);
+        p1.setTaktyka(taktyka);
+              
                 
         p2.setPanel1(p1);
         p2.setPanel3(p3);
         p2.setPanel4(p4);
         p2.setFunkcje(funkcje);
+        p2.setTaktyka(taktyka);
         
         p3.setPanel1(p1);
         p3.setPanel2(p2);
@@ -55,10 +59,17 @@ public class OX extends JFrame {
         p4.setPanel3(p3);
         p4.setFunkcje(funkcje);
         
+        
         funkcje.setPanel1(p1);
         funkcje.setPanel2(p2);
         funkcje.setPanel3(p3);
         funkcje.setPanel4(p4);
+        funkcje.setTaktyka(taktyka);
+        
+        taktyka.setFunkcje(funkcje);
+        taktyka.setPanel1(p1);
+        taktyka.setPanel2(p2);
+        taktyka.setPanel3(p3);
         
                
     }
