@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.util.Arrays;
 import java.util.List;
 import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,14 +19,12 @@ import lombok.Setter;
 @Getter
 public class Panel1 extends JPanel implements ActionListener {
 
-    String tekst = "hello man";
-    JLabel l2 = new JLabel(tekst);
-
+    
     int i = 0;
     int m;
     public Panel2 panel2;
     public Panel3 panel3;
-    public Panel4 panel4;
+    public Naglowek naglowek;
     public Taktyka taktyka;
     public Funkcje funkcje = new Funkcje();
     
@@ -38,12 +35,11 @@ public class Panel1 extends JPanel implements ActionListener {
 
     
     public Panel1() {
-        setPreferredSize(new Dimension(200, 200));
-        setBackground(Color.pink);
+        setPreferredSize(new Dimension(170, 170));
+        setBackground(Color.DARK_GRAY);
         setVisible(true);
         System.out.println("Działa Panel1");
         funkcje.wystawienieCzystejTablicyDoGry(pomocnicza, b, this);
-        add(l2);
     }
 
     @Override
@@ -53,19 +49,26 @@ public class Panel1 extends JPanel implements ActionListener {
         if (funkcje.getKtoTeraz() == 0 & funkcje.getIleJeszczeRuchowZostalo() > 0) {
             funkcje.PodajePoleWKtoreOdbedzieSieRuchGracza(funkcje.getIleJeszczeRuchowZostalo(), b, e, this);
             funkcje.wcisnieciePrzycisku(m, pomocnicza, this);
-            funkcje.setZmianaGracza();
             funkcje.setZmniejszenieRuchowOJeden();
-            funkcje.wypisanieRóżnychParametrów(e, this);
             funkcje.sprawdzenieCzyKoniec(pomocnicza, b);
+            funkcje.setZmianaGracza();
+            
+            funkcje.wypisanieRóżnychParametrów(e, this);
+            
+            funkcje.dezaktywacjaIAktywacjaPaneliPoRozpoczeciuGry();
         }
         
         if (funkcje.getKtoTeraz() == 1 & funkcje.getIleJeszczeRuchowZostalo() > 0) {
+            
             funkcje.PodajePoleWKtoreOdbedzieSieRuchKomputera(funkcje.getIleJeszczeRuchowZostalo(), b, this);
             funkcje.wcisnieciePrzycisku(m, pomocnicza, this);
-            funkcje.setZmianaGracza();
             funkcje.setZmniejszenieRuchowOJeden();
-            funkcje.wypisanieRóżnychParametrów(e, this);
             funkcje.sprawdzenieCzyKoniec(pomocnicza, b);
+            funkcje.setZmianaGracza();
+            
+            funkcje.wypisanieRóżnychParametrów(e, this);
+            
+            funkcje.dezaktywacjaIAktywacjaPaneliPoRozpoczeciuGry();
         }
     }
 
