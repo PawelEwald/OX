@@ -28,6 +28,7 @@ public class Funkcje {
     
     public Panel1 panel1;
     public Panel2 panel2;
+    public Panel21 panel21;
     public Panel3 panel3;
     public Naglowek naglowek;
     public Taktyka taktyka;
@@ -74,6 +75,7 @@ public class Funkcje {
         }
         setIleJeszczeRuchowZostalo(9);
         panel2.setVisible(true);
+        panel21.setVisible(false);
         if (getKtoTeraz() == 1 & getIleJeszczeRuchowZostalo() > 0) {
             PodajePoleWKtoreOdbedzieSieRuchKomputera(getIleJeszczeRuchowZostalo(), b, panel1);
             wcisnieciePrzycisku(b, m, pomocnicza);
@@ -114,8 +116,10 @@ public class Funkcje {
     public void dezaktywacjaIAktywacjaPaneliPoRozpoczeciuGry() {
         if (getIleJeszczeRuchowZostalo() < 9 & getIleJeszczeRuchowZostalo() > 0) {
             panel2.setVisible(false);
+            panel21.setVisible(true);
         } else {
             panel2.setVisible(true);
+            panel21.setVisible(false);
         }
     }
     

@@ -2,6 +2,7 @@ package ox;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -25,17 +26,23 @@ public class Panel3 extends JPanel implements ActionListener {
     public Funkcje funkcje;
 
     JButton exit = new JButton("EXIT");
-    JButton odNowa = new JButton("Zagraj jeszcze raz");
+    JButton odNowa = new JButton("GRAJ DALEJ");
+    
 
     public Panel3() {
         
-        setPreferredSize(new Dimension(200, 200));
-        setBackground(Color.blue);
+        setPreferredSize(new Dimension(406, 50));
+        //setBackground(Color.blue);
         setVisible(true);
 
         exit.addActionListener(this);
+        exit.setFont(new Font("Serif",Font.CENTER_BASELINE,16));
+        exit.setPreferredSize(new Dimension(100, 40));
         add(exit);
+        
         odNowa.addActionListener(this);
+        odNowa.setFont(new Font("Serif",Font.CENTER_BASELINE,16));
+        odNowa.setPreferredSize(new Dimension(140, 40));
         add(odNowa);
 
     }

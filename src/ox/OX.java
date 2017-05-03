@@ -20,17 +20,20 @@ public class OX extends JFrame {
     
     Panel1 p1 = new Panel1();
     Panel2 p2 = new Panel2();
+    Panel21 p21 = new Panel21();
     Panel3 p3 = new Panel3();
     Naglowek naglowek = new Naglowek();
     Funkcje funkcje = new Funkcje();
     Taktyka taktyka = new Taktyka();
     Punkty punkty = new Punkty();
+    Stopka stopka = new Stopka();
 
 
     public OX() {
         okno1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         okno1.setBackground(Color.BLUE);
-        okno1.setSize(430, 500);
+        okno1.setSize(430, 340);
+        okno1.setResizable(false);
         
         okno1.setLayout(layout);
         
@@ -38,7 +41,11 @@ public class OX extends JFrame {
         okno1.add(punkty);
         okno1.add(p1);
         okno1.add(p2);
+        okno1.add(p21);
         okno1.add(p3);
+        okno1.add(stopka);
+        
+        p21.setVisible(false);
         okno1.setVisible(true);
         okno1.setLocationRelativeTo(null);
         
@@ -82,6 +89,7 @@ public class OX extends JFrame {
         funkcje.setNaglowek(naglowek);
         funkcje.setTaktyka(taktyka);
         funkcje.setPunkty(punkty);
+        funkcje.setPanel21(p21);
         
         taktyka.setFunkcje(funkcje);
         taktyka.setPanel1(p1);

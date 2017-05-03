@@ -2,6 +2,8 @@ package ox;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -25,20 +27,21 @@ public class Punkty extends JPanel implements ActionListener {
     public JLabel wo,wx,wox;
 
     public Punkty() {
-
+        JLabel naglowek = new JLabel("PUNKTY");
+        //add(naglowek);
         //String w = Integer.toString(funkcje.wygraneO);
-        setLayout(new GridLayout(3, 2, 10, 10));
-        setPreferredSize(new Dimension(100, 100));
-        setBackground(Color.white);
+        setLayout(new GridLayout(4, 2, 0, 0));
+        setPreferredSize(new Dimension(80, 80));
+        //setBackground(Color.white);
         setVisible(true);
 
         ImageIcon imgO = new ImageIcon("scr/Om.png");
         JLabel wynikO = new JLabel(imgO);
         
         add(wynikO);
-
-         wo = new JLabel("" + funkcje.wygraneO);
         
+        wo = new JLabel("" + funkcje.wygraneO);
+        wo.setFont(new Font("Serif",Font.BOLD,21));
         add(wo);
 
         ImageIcon imgX = new ImageIcon("scr/Xm.png");
@@ -46,6 +49,7 @@ public class Punkty extends JPanel implements ActionListener {
         add(wynikX);
 
         wx = new JLabel("" + funkcje.wygraneX);
+        wx.setFont(new Font("Serif",Font.BOLD,21));
         add(wx);
 
         ImageIcon imgOX = new ImageIcon("scr/OXm.png");
@@ -53,6 +57,7 @@ public class Punkty extends JPanel implements ActionListener {
         add(wynikOX);
 
         wox = new JLabel("" + funkcje.remis);
+        wox.setFont(new Font("Serif",Font.BOLD,21));
         add(wox);
 
     }
