@@ -1,6 +1,5 @@
 package ox;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -22,7 +21,7 @@ public class Stopka extends JPanel{
     public Panel3 panel3;
     public Funkcje funkcje;
 
-    JLabel labelNaglowka = new JLabel("    P.E. v1.0");
+    JLabel labelNaglowka = new JLabel("    P.E. v1.1");
     
     public Stopka(){
         setLayout(new GridLayout(1, 1,10,10)); 

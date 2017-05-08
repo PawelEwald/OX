@@ -1,10 +1,7 @@
 package ox;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
-import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import javax.swing.JFrame;
 import lombok.Getter;
 import lombok.Setter;
@@ -67,6 +64,7 @@ public class OX extends JFrame {
         p3.setPanel2(p2);
         p3.setNaglowek(naglowek);
         p3.setFunkcje(funkcje);
+        p3.setPunkty(punkty);
         
         punkty.setPanel1(p1);
         punkty.setPanel2(p2);

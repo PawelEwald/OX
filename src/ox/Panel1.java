@@ -49,25 +49,22 @@ public class Panel1 extends JPanel implements ActionListener {
         if (funkcje.getKtoTeraz() == 0 & funkcje.getIleJeszczeRuchowZostalo() > 0) {
             funkcje.PodajePoleWKtoreOdbedzieSieRuchGracza(funkcje.getIleJeszczeRuchowZostalo(), b, e, this);
             funkcje.wcisnieciePrzycisku(m, pomocnicza, this);
+            funkcje.jakKoniecToZaznaczenieKoncowejLinijkiWygrywającej(pomocnicza,b,this);
             funkcje.setZmniejszenieRuchowOJeden();
             funkcje.sprawdzenieCzyKoniec(pomocnicza, b);
             funkcje.setZmianaGracza();
-            
             funkcje.wypisanieRóżnychParametrów(e, this);
-            
             funkcje.dezaktywacjaIAktywacjaPaneliPoRozpoczeciuGry();
         }
         
         if (funkcje.getKtoTeraz() == 1 & funkcje.getIleJeszczeRuchowZostalo() > 0) {
-            
             funkcje.PodajePoleWKtoreOdbedzieSieRuchKomputera(funkcje.getIleJeszczeRuchowZostalo(), b, this);
             funkcje.wcisnieciePrzycisku(m, pomocnicza, this);
+            funkcje.jakKoniecToZaznaczenieKoncowejLinijkiWygrywającej(pomocnicza,b,this);
             funkcje.setZmniejszenieRuchowOJeden();
             funkcje.sprawdzenieCzyKoniec(pomocnicza, b);
             funkcje.setZmianaGracza();
-            
             funkcje.wypisanieRóżnychParametrów(e, this);
-            
             funkcje.dezaktywacjaIAktywacjaPaneliPoRozpoczeciuGry();
         }
     }
